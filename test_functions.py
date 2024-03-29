@@ -17,3 +17,13 @@ def test_add():
 #    assert f2c(122) == pytest.approx(50)
 #    with pytest.raises(AssertionError):
 #        f2c(-600)
+
+def test_multiply():
+    # Prueba para la multiplicación de dos números enteros
+    assert multiply(2, 3) == 6
+    # Prueba para la multiplicación de un número entero y un número decimal
+    assert multiply(4, 2.5) == 10.0
+    # Prueba para la multiplicación de dos números decimales
+    assert multiply(1.5, 2.5) == 3.75
+    # Prueba para la multiplicación por cero
+    assert multiply(10, 0) == 0
