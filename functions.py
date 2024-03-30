@@ -8,4 +8,9 @@ def multiply(a, b):
     return a * b
 
 def convert_fahrenheit_to_celsius(fahrenheit):
-    return multiply(subtract(fahrenheit, 32), 5 / 9) # <-- Fix this in step 7
+    celsius = multiply(subtract(fahrenheit, 32), 5 / 9)
+    if celsius == 0:
+        celsius = 32
+    elif celsius < 0:
+        raise ValueError("El resultado es menor que 0 en Celsius")
+    return celsius
